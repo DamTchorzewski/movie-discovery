@@ -1,160 +1,149 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.png">
-    <img src="docs/images/banner-light.png" alt="Filmoteka: a film browser on the TMDb API" width="100%">
-  </picture>
-</p>
+# Kadr
 
-<p align="center">
-  <img src="docs/images/showcase.jpg" alt="Filmoteka on desktop and on a phone" width="100%">
-</p>
+**A cinematic movie discovery app on the TMDB API, in Polish and English.**
+
+> **Status:** version 1 of Kadr is being built on `feat/app-redesign`. The logo, the favicon and the README images
+> (banner, showcase, screenshots from `tools/readme-images`) come with the brand work; the mark in the app is temporary.
 
 ## About
 
-<a href="https://damtchorzewski.github.io/tmdb-movie-browser/"><img src="docs/images/open-site.png" alt="Open the live site" width="130"></a>
+<a href="https://damtchorzewski.github.io/movie-discovery/">Open the live site</a>
 
-**Filmoteka** is a film browser on The Movie Database (TMDb) API: the trending films of the day, a title search, a
-details window with the trailer, and personal "watched" and "queue" lists kept in the browser. A static site in
-vanilla JavaScript modules, SASS and Parcel, published to GitHub Pages.
+**Kadr** (Polish for a film still) helps you find a film, see where to watch it in Poland and decide what to watch
+tonight. It grew out of [Filmoteka](https://github.com/DamTchorzewski/tmdb-movie-browser), a team project of HiFiveTeam,
+and is rebuilt from scratch as a single-page app with React and TypeScript.
 
-- **Trending films.** The home page shows the trends of the day with pagination; each film is a card with the basic
-  information.
-- **Search.** Find films by title, with pagination of the results (`search.js`, `pagination.js`).
-- **Film details.** A click on a card opens a window with the full information about the film.
-- **Trailers.** The details window plays the trailer in a lightbox (`trailer.js`, BasicLightbox).
-- **Watched and queue.** Films are added to the "watched" and "queue" lists; the buttons in the window update their
-  state when the lists change (`btn-modal.js`, `refresh.js`).
-- **My library.** A separate page with both lists and a switch between them; the lists are kept in the browser's
-  Local Storage (`local-storage.js`, `my-library.js`).
-- **The team window.** The footer opens the window with the people who made the site (`modal-team.js`).
-- **Deployed by Actions.** A push to `main` builds the site and publishes it to the `gh-pages` branch.
-
-> **Status:** the film data comes from The Movie Database (TMDb), so the posters and the trending list change over
-> time.
+- **Home.** A trending hero (it advances by itself only without reduced motion, and has a pause button), rows of trends
+  for today or the week, films in Polish cinemas, coming soon, top rated and popular on Netflix, HBO Max and Disney+.
+- **Search.** A palette on `Ctrl K` or `/` for films and people as you type, and a full results page (`/search/?q=`).
+- **Discover.** Genres, release years, minimum rating and votes, runtime, original language and the streaming services
+  available in Poland, with six sorts; every filter is in the URL (`/discover/?genres=18&from=2000`).
+- **Film page.** Backdrop with an ambient glow, the Polish age rating, the trailer (YouTube loads only after a click),
+  cast, director and writers, **where to watch in Poland** (stream, rent, buy; data from JustWatch), the saga, stills,
+  facts and recommendations. The clicked poster morphs into the page (View Transitions).
+- **People and collections.** Biography, known for and the filmography by role; a saga in order with your progress.
+- **My films.** A watchlist and a watched list with your rating (1-10), a note and the date; stats (films, hours, average
+  rating, favourite genre); export to and import from a JSON file. The lists of the first Filmoteka are moved over.
+- **Tonight.** Pick a mood, the time you have, your services and a minimum rating; Kadr shuffles the posters and draws
+  one film, from your watchlist or from all films.
+- **Polish and English.** Polish at `/`, English at `/en/`, the same page in the other language one click away.
+- **Dark, light or system theme**, installable as an app (manifest and an app-shell service worker).
+- **Accessible.** WCAG 2.2 AA in both themes, tested with axe on every page template; keyboard and screen reader
+  friendly dialogs; `prefers-reduced-motion` respected.
 
 ## Tech stack
 
-|          |                                                                                                                       |
-| -------- | --------------------------------------------------------------------------------------------------------------------- |
-| Stack    | HTML5 in partials (`posthtml-include`), SASS, JavaScript ES6+ modules; [Parcel 2](https://parceljs.org/)             |
-| UI       | `modern-normalize`, `tui-pagination`, BasicLightbox (trailers), Notiflix (notifications)                              |
-| Data     | Fetch API against [The Movie Database](https://www.themoviedb.org/documentation/api) (v3); Local Storage for the lists |
-| Tests    | none                                                                                                                  |
-| Hosting  | GitHub Pages, `gh-pages` branch, published by GitHub Actions (`.github/workflows/deploy.yml`)                         |
+|         |                                                                                                                       |
+| ------- | --------------------------------------------------------------------------------------------------------------------- |
+| Stack   | [Vite 8](https://vite.dev), React 19, TypeScript 6, TanStack Router (typed routes, `{-$lang}` prefix)                 |
+| UI      | Tailwind CSS v4 (`oklch` tokens with `light-dark()`), Motion, lucide icons, Fraunces and Hanken Grotesk (self-hosted) |
+| Data    | [TMDB API](https://developer.themoviedb.org/) v3 through TanStack Query; the library in localStorage                  |
+| Tests   | Vitest (logic), Playwright on desktop and a Pixel 7 with axe-core (WCAG 2.2 AA, both themes)                          |
+| Hosting | GitHub Pages, published by GitHub Actions (`.github/workflows/deploy.yml`)                                            |
 
-The content is in English; code and commits are in English.
+The interface is in Polish and English; code, commits and documentation are in English.
 
-## Screenshots
-
-<p align="center">
-  <img src="docs/images/pages.jpg" alt="The film details window and My library" width="100%">
-</p>
-<p align="center">
-  <img src="docs/images/search.jpg" alt="Search results for a title" width="100%">
-</p>
-<p align="center">
-  <img src="docs/images/mobile.jpg" alt="Home page and film details on a phone" width="100%">
-</p>
+Third-party code at run time: the TMDB API and images (`api.themoviedb.org`, `image.tmdb.org`) and, only after a click on
+"Play trailer", the YouTube player in privacy-enhanced mode (`www.youtube-nocookie.com`). No analytics, no cookies.
 
 ## Quick start
 
 ```bash
-git clone https://github.com/DamTchorzewski/tmdb-movie-browser.git
-cd tmdb-movie-browser
-npm install
-npm start      # http://localhost:1234
+git clone https://github.com/DamTchorzewski/movie-discovery.git
+cd movie-discovery
+pnpm install
+cp .env.example .env.local   # then fill in VITE_TMDB_API_KEY
+pnpm dev                     # http://localhost:5173/movie-discovery/
 ```
 
-Requirements: Node.js LTS and npm. Parcel reloads the page when a file changes.
+Requirements: Node.js 22 (`.nvmrc`) and pnpm 11.18 (`packageManager`).
 
 ## Scripts
 
-| Command         | What it does                                                                           |
-| --------------- | -------------------------------------------------------------------------------------- |
-| `npm start`     | development server with live reload (`parcel src/*.html`)                              |
-| `npm run build` | production build to `dist/` with the public URL `/tmdb-movie-browser/` (what the workflow runs) |
+| Command                        | What it does                                                                     |
+| ------------------------------ | -------------------------------------------------------------------------------- |
+| `pnpm dev`                     | development server with hot reload                                               |
+| `pnpm build`                   | typecheck and production build to `dist/` (with the CSP and the Pages fallbacks) |
+| `pnpm preview`                 | serve the build on port 4173                                                     |
+| `pnpm check`                   | `format:check`, `lint`, `typecheck` and `test`                                   |
+| `pnpm test`                    | unit tests (Vitest)                                                              |
+| `pnpm test:e2e`                | Playwright end-to-end, axe and reduced-motion tests (builds with a fake key)     |
+| `pnpm e2e:install`             | install the Chromium that Playwright uses                                        |
+| `pnpm health`                  | read-only check of the live site (`SITE_URL=...`)                                |
+| `pnpm format`, `pnpm lint:fix` | fix formatting and lint problems                                                 |
 
 ## Configuration
 
-No environment variables. The base address and the (v3) API key of The Movie Database are constants at the top of
-`src/js/api.js`; this is a static site, so the key is visible in the browser whichever way it is supplied. The public
-URL of the build is the `--public-url /tmdb-movie-browser/` argument of the `build` script; change it when the
-repository is renamed.
+Copy `.env.example` to `.env.local` (git-ignored):
+
+| Variable            | What                                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| `VITE_TMDB_API_KEY` | TMDB API key (v3); ships to the browser on purpose; without it the app says the key is missing |
+| `SITE_URL`          | optional public address with its path; the default base path is `/movie-discovery/`            |
+
+Where each value is set on GitHub and why the key is a variable: [docs/deployment.md](docs/deployment.md).
 
 ## Structure
 
-The project is organised in small modules, which makes the code easier to manage and extend.
-
 ```
-src/index.html, library.html  ★ the two pages (home, My library); they include the partials below
-src/partials/                 header (and library header), gallery, pagination, footer, loader, movie and team windows
-src/sass/                     styles in SASS, compiled by Parcel
-src/images/                   logo, icons.svg, the header and gallery pictures, the photos of the team
-src/js/
-  index.js, library.js        entry modules of the home page and of My library
-  api.js                      ★ communication with The Movie Database: trending, search, details, trailers
-  btn-modal.js                the buttons that add a film to "watched" and "queue" (Local Storage)
-  genres.js                   the film genres, to map genre identifiers to names
-  loader.js                   shows and hides the animated loader
-  local-storage.js            keeps the "watched" and "queue" lists
-  modal-movie.js              shows and hides the window with the film details
-  modal-open-close.js         opens and closes a window: Escape, a click outside
-  modal-team.js               the window with the team
-  my-library.js               the user's library: "watched" and "queue" and the switch between them
-  pagination.js               pagination of search results and of trending lists
-  refresh.js                  updates the state of the add buttons after the lists change
-  refs.js                     references to DOM elements, shared by the modules
-  render-movie-cards.js       renders the film cards on the home page and in the library
-  render-movie-details.js     renders the film details in the window
-  scroll-top.js               scrolls the page to the top
-  search.js                   the title search, with pagination
-  trailer.js                  shows the trailer in a window
-  trending-movies-pagination.js  pagination of the trending films
-assets/                       images of the Parcel template and of the first README (not used by the page)
-docs/                         repository description; docs/images/ holds the README images (generated)
-.github/workflows/            deploy.yml: build, and publish to the gh-pages branch from main
+src/main.tsx, router.tsx     entry, TanStack Query and the routes (Polish at /, English at /en/)
+src/i18n/messages.ts         ★ every interface text in Polish and English
+src/lib/                     TMDB client and queries, Discover filters, library store and schema, tonight picker
+src/components/              app shell, search palette, hero, rails, poster and person cards, dialogs, states
+src/pages/                   one file per page: home, discover, search, film, person, collection, my films, tonight, about
+src/styles/app.css           ★ design tokens (both themes), components, motion
+src/assets/team/             photos of HiFiveTeam for the About page
+public/                      favicon, manifest, icons, service worker
+tests/e2e/                   Playwright specs, helpers and the TMDB fixtures
+scripts/health.mjs           live-site check run after a deploy
+docs/                        deployment, decisions, repository settings
+.github/workflows/           ci.yml (pull requests), deploy.yml (develop build, main deploy)
 ```
 
 ## Branches and workflows
 
-Shared standards from `reops/standards`: `main` ≤ `develop` ≤ a working branch `<type>/<topic>`, Conventional
-Commits in English. `deploy.yml` builds every push to `main` and publishes the result to `gh-pages`. Details:
+Shared standards from `reops/standards`: `main` ≤ `develop` ≤ a working branch `<type>/<topic>`, Conventional Commits
+in English, a work PR into `develop` and a release PR into `main`. CI runs on every pull request; `main` deploys. Details:
 `reops/standards/git.md` and `reops/standards/workflows.md`.
 
 **Departures from the standards (and why):**
 
-- **Feature branches straight into `main`:** nine contributors worked this way; there is no `develop`.
-- **No tests, no CI beyond the deploy workflow, no `.env.example`:** the site has no configuration (see above).
-- **The TMDb key is in the source:** a static site cannot keep it secret; it is a public client key.
-- **npm, not pnpm, and no `.nvmrc`:** the project predates the standards.
-- **`package.json`:** `author` still names the author of the Parcel starter template; the project is under the MIT license
-  (`LICENSE`).
-- **Documentation:** the template's `README.en.md` and `README.pl.md` (generic Parcel instructions) were removed; the
-  Parcel documentation covers what they said.
-- **README images** are made by `tools/readme-images` (profile `tmdb-movie-browser`) from the live site; the logo
-  is a wordmark.
-- **No DamReboot footer:** the repository belongs to a team of authors.
+- **A service worker** although client sites have none: Kadr is an installable app; it caches only the app shell and
+  keeps HTML network first ([docs/decisions.md](docs/decisions.md)).
+- **A public API key in the bundle:** a static site has no server and TMDB cannot restrict a key to a domain; it is a
+  repository variable, never committed ([docs/decisions.md](docs/decisions.md)).
+- **The CSP is a `<meta>`, the other security headers are missing:** GitHub Pages cannot send headers; the meta CSP
+  carries the hash of the one inline script.
+- **README images** are missing until the brand is done; they will come from `tools/readme-images` (profile
+  `movie-discovery`).
 
 ## Documentation
 
-| File                                     | What it covers                                                |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| [docs/repository.md](docs/repository.md) | GitHub description and topics, and the command that sets them |
+| File                                     | What it covers                                                                        |
+| ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| [docs/deployment.md](docs/deployment.md) | workflows, variables, Pages paths, CSP, health check, rollback                        |
+| [docs/decisions.md](docs/decisions.md)   | why a new repository, a SPA, the key in the browser, localStorage, the service worker |
+| [docs/repository.md](docs/repository.md) | GitHub description, topics and settings, and the command that sets them               |
+
+Local working files (exports, archived images of the first version) live in `.scratch/`, never committed.
 
 ## Team
 
-HiFiveTeam; the roles are the ones the team wrote down.
+Kadr grew out of **Filmoteka**, built by HiFiveTeam; the roles are the ones the team wrote down. The rebuild as Kadr is
+by Damian Tchorzewski.
 
-| Member                                                           | Role and work                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Damian Tchorzewski](https://github.com/damiantchorzewski)       | **Team Lead.** Project management: coordinating and delegating tasks; the starter files of the website; code review; pagination and search; `icons.svg`.                                                                       |
-| [Beniamin Brzeziński](https://github.com/benbrzezinski)          | **Scrum Master.** Code review; planning and leading team meetings; the API with `fetch`; Local Storage for user data; adding and deleting films; global styling; Trello for project management.                                 |
-| [Dorota Dudzik](https://github.com/doradudzik)                   | Rendering and functionality of the film cards; the overall application and styles; animations.                                                                                                                                 |
-| [Edyta Sowa](https://github.com/EdytaSowa)                       | The header of the home and library pages; the search.                                                                                                                                                                          |
-| [Filip Vukić](https://github.com/FVuk)                           | The window for films and for the team.                                                                                                                                                                                         |
-| [Dagmara Sobczyk](https://github.com/DagmaraSobczak)             | The footer of the home and library pages; the display of trailers.                                                                                                                                                             |
-| [Dawid Demkowicz](https://github.com/Ddemkowicz)                 | The "Watched" and "Queue" buttons that build the lists of films.                                                                                                                                                               |
-| [Filip Zieliński](https://github.com/Thebrefff)                  | The search.                                                                                                                                                                                                                    |
-| [Filip Grzelak](https://github.com/FilipGk)                      | Pagination, to show a large amount of data on several pages.                                                                                                                                                                   |
+| Member                                                     | Role and work                                                                                                                        |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [Damian Tchorzewski](https://github.com/damiantchorzewski) | **Team Lead.** Project management, coordinating and delegating tasks; the starter files; code review; pagination and search; icons.  |
+| [Beniamin Brzeziński](https://github.com/benbrzezinski)    | **Scrum Master.** Code review; team meetings; the API with `fetch`; Local Storage; adding and deleting films; global styles; Trello. |
+| [Dorota Dudzik](https://github.com/doradudzik)             | Rendering and functions of the film cards; the overall application and styles; animations.                                           |
+| [Edyta Sowa](https://github.com/EdytaSowa)                 | The header of the home and library pages; the search.                                                                                |
+| [Filip Vukić](https://github.com/FVuk)                     | The window for films and for the team.                                                                                               |
+| [Dagmara Sobczyk](https://github.com/DagmaraSobczak)       | The footer of the home and library pages; the display of trailers.                                                                   |
+| [Dawid Demkowicz](https://github.com/Ddemkowicz)           | The "Watched" and "Queue" buttons that build the lists of films.                                                                     |
+| [Filip Zieliński](https://github.com/Thebrefff)            | The search.                                                                                                                          |
+| [Filip Grzelak](https://github.com/FilipGk)                | Pagination of large result sets.                                                                                                     |
+
+This product uses the TMDB API but is not endorsed or certified by TMDB. Streaming availability comes from JustWatch.
 
 Licensed under the [MIT License](LICENSE).

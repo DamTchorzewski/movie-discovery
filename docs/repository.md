@@ -1,42 +1,55 @@
-# Repozytorium: opis i tagi
+# Repository: description and topics
 
-Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w plikach repozytorium). Przegląd projektu: [README](../README.md).
+What is set on GitHub by hand (it cannot be stored in the files of the repository). Overview: [README](../README.md).
 
-## Nazwa repozytorium: `tmdb-movie-browser`
+## Name: `movie-discovery`
 
-Standard nazw repozytoriów: `reops/standards/repo-names.md`. Repozytorium nazywało się wcześniej `Filmoteka-HiFiveTeam`; od 2026-11-20 nazywa się `tmdb-movie-browser` (nazwa mówi, czym jest projekt: fraza szukana na GitHubie; nazwa zespołu jest tylko w README). GitHub przekierowuje stary adres repozytorium, ale **adres strony (GitHub Pages) zmienił się** na `https://damtchorzewski.github.io/tmdb-movie-browser/`, a stary przestał działać. Build używa `--public-url /tmdb-movie-browser/` (jest w `package.json`); workflow `deploy.yml` publikuje stronę do gałęzi `gh-pages`.
+Naming standard: `reops/standards/repo-names.md`. The repository was created on 2026-11-21 as the successor of the team
+project [`tmdb-movie-browser`](https://github.com/DamTchorzewski/tmdb-movie-browser) (Filmoteka, HiFiveTeam), whose
+history it carries; that repository stays as it was. The product name is **Kadr**; the repository name says what the
+project is.
 
-## Opis i tagi (About)
+## About
 
-GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma limit 350 znaków, tagi (topics) pisze się małymi literami z myślnikami, najwyżej 20.
+GitHub: the repository page → ⚙ next to "About". The description is at most 350 characters; topics are lower-case with
+hyphens, at most 20.
 
-**Opis (Description):**
-
-```text
-Movie browser on the TMDb API: search, trailers and watchlists in vanilla JavaScript with Parcel.
-```
-
-**Strona (Website):**
+**Description:**
 
 ```text
-https://damtchorzewski.github.io/tmdb-movie-browser/
+Kadr: a cinematic movie discovery app on the TMDB API, in Polish and English. Trends, filters, where to watch in Poland, a watchlist with ratings and a pick for tonight.
 ```
 
-**Tagi (Topics):**
+**Website:**
 
 ```text
-movies tmdb-api movie-database javascript sass parcel pagination local-storage responsive-design github-pages github-actions
+https://damtchorzewski.github.io/movie-discovery/
 ```
 
-Z GitHub CLI (`gh`) to samo jedną komendą:
+**Topics:**
+
+```text
+movies tmdb-api movie-discovery watchlist react typescript vite tailwindcss tanstack-router tanstack-query pwa i18n accessibility playwright github-pages
+```
+
+With the GitHub CLI:
 
 ```bash
-gh repo edit DamTchorzewski/tmdb-movie-browser --homepage "https://damtchorzewski.github.io/tmdb-movie-browser/" --description "Movie browser on the TMDb API: search, trailers and watchlists in vanilla JavaScript with Parcel." --add-topic movies --add-topic tmdb-api --add-topic movie-database --add-topic javascript --add-topic sass --add-topic parcel --add-topic pagination --add-topic local-storage --add-topic responsive-design --add-topic github-pages --add-topic github-actions --add-topic
+gh repo edit DamTchorzewski/movie-discovery \
+  --homepage "https://damtchorzewski.github.io/movie-discovery/" \
+  --description "Kadr: a cinematic movie discovery app on the TMDB API, in Polish and English. Trends, filters, where to watch in Poland, a watchlist with ratings and a pick for tonight." \
+  --add-topic movies --add-topic tmdb-api --add-topic movie-discovery --add-topic watchlist --add-topic react \
+  --add-topic typescript --add-topic vite --add-topic tailwindcss --add-topic tanstack-router \
+  --add-topic tanstack-query --add-topic pwa --add-topic i18n --add-topic accessibility --add-topic playwright \
+  --add-topic github-pages
 ```
 
-## Ustawienia do włączenia
+## Settings
 
-| Gdzie (GitHub) | Co ustawić |
-| ----------------------------------- | ---------------------------------------------------- |
-| Settings → Pages | Source: gałąź `gh-pages` (publikuje ją `deploy.yml`) |
-| Settings → General → Default branch | `main` (już jest) |
+| Where (GitHub)                               | What                                                                          |
+| -------------------------------------------- | ----------------------------------------------------------------------------- |
+| Settings → Pages                             | Source: **GitHub Actions** (set on 2026-11-21)                                |
+| Settings → Secrets and variables → Variables | `VITE_TMDB_API_KEY` (repository variable), see [deployment.md](deployment.md) |
+| Settings → General → Pull Requests           | rebase merging and merge commits on, squash off, auto-delete branches off     |
+| Settings → Rules → Rulesets                  | `main` and `develop`: restrict deletions, block force pushes                  |
+| Settings → Code security                     | Dependabot alerts and security updates, secret scanning with push protection  |
