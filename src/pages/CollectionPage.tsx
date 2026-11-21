@@ -61,7 +61,7 @@ export function CollectionPage() {
           {parts.map((movie, i) => (
             <li key={movie.id} className="relative">
               <span
-                className="mb-2 block font-display text-3xl font-semibold text-muted/60 tabular-nums"
+                className="mb-2 block font-display text-3xl font-semibold text-muted tabular-nums"
                 aria-hidden="true"
               >
                 {String(i + 1).padStart(2, "0")}

@@ -1,0 +1,698 @@
+{
+  "adult": false,
+  "backdrop_path": "/oiwc338EoBgS4sEI2ixAny4KQKg.jpg",
+  "belongs_to_collection": {
+    "id": 119,
+    "name": "Władca Pierścieni - Kolekcja",
+    "poster_path": "/nBlZt9pCo1xjVIO11HfbVugcGb6.jpg",
+    "backdrop_path": "/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg"
+  },
+  "budget": 93000000,
+  "genres": [
+    {
+      "id": 12,
+      "name": "Przygodowy"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 28,
+      "name": "Akcja"
+    }
+  ],
+  "homepage": "",
+  "id": 120,
+  "imdb_id": "tt0120737",
+  "origin_country": ["US"],
+  "original_language": "en",
+  "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+  "overview": "Ekranizacja pierwszej części trylogii Tolkiena, \"Drużyna Pierścienia\" zapoznaje widzów z czarodziejskim światem Śródziemia i jego mieszkańcami - ludźmi, hobbitami, elfami, krasnoludami, czarodziejami, trollami i orkami. W tej części trylogii młody i nieśmiały hobbit Frodo Baggins (Elijah Wood) odziedzicza pierścień - Jedyny Pierścień, narzędzie władzy absolutnej, które pozwoliłoby Sauronowi, mrocznemu Władcy Mordoru, rządzić Śródziemiem i zniewolić zamieszkujące je ludy. Frodo, wraz z lojalną kompanią hobbitów, ludzi, czarodzieja, krasnoluda i elfa, musi zabrać Pierścień do Szczelin Zagłady, gdzie został kiedyś wykuty, i zniszczyć go raz na zawsze. Taka podróż oznacza zapuszczenie się głęboko do krainy Czarnego Władcy, gdzie gromadzi on armię orków. Drużyna musi walczyć nie tylko ze złem czającym się wokół, ale i z wewnętrznymi waśniami, oraz niszczącym wpływem samego Pierścienia. Przyszłość świata i przeznaczenie drużyny są ze sobą splecione.",
+  "popularity": 39.5171,
+  "poster_path": "/bjWRzhXUXTNPnwptBkXQzCflVBE.jpg",
+  "production_countries": [
+    {
+      "iso_3166_1": "NZ",
+      "name": "New Zealand"
+    },
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2001-12-18",
+  "revenue": 871368364,
+  "runtime": 179,
+  "softcore": false,
+  "status": "Released",
+  "tagline": "Jeden pierścień by wszystkimi rządzić.",
+  "title": "Władca Pierścieni: Drużyna Pierścienia",
+  "video": false,
+  "vote_average": 8.5,
+  "vote_count": 28918,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 109,
+        "known_for_department": "Acting",
+        "name": "Elijah Wood",
+        "original_name": "Elijah Wood",
+        "popularity": 3.9726,
+        "profile_path": "/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg",
+        "cast_id": 28,
+        "character": "Frodo",
+        "credit_id": "52fe421ac3a36847f800448f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1327,
+        "known_for_department": "Acting",
+        "name": "Ian McKellen",
+        "original_name": "Ian McKellen",
+        "popularity": 4.6879,
+        "profile_path": "/5cnnnpnJG6TiYUSS7qgJheUZgnv.jpg",
+        "cast_id": 29,
+        "character": "Gandalf",
+        "credit_id": "52fe421ac3a36847f8004493",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 110,
+        "known_for_department": "Acting",
+        "name": "Viggo Mortensen",
+        "original_name": "Viggo Mortensen",
+        "popularity": 3.6844,
+        "profile_path": "/vH5gVSpHAMhDaFWfh0Q7BG61O1y.jpg",
+        "cast_id": 30,
+        "character": "Aragorn",
+        "credit_id": "52fe421ac3a36847f8004497",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1328,
+        "known_for_department": "Acting",
+        "name": "Sean Astin",
+        "original_name": "Sean Astin",
+        "popularity": 3.4087,
+        "profile_path": "/As3ctGUtBYmG4zj4Ifyrcqd71HP.jpg",
+        "cast_id": 36,
+        "character": "Sam",
+        "credit_id": "52fe421ac3a36847f80044af",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 65,
+        "known_for_department": "Acting",
+        "name": "Ian Holm",
+        "original_name": "Ian Holm",
+        "popularity": 2.0171,
+        "profile_path": "/cOJDgvgj4nMec6Inzj1H5nugTO5.jpg",
+        "cast_id": 41,
+        "character": "Bilbo",
+        "credit_id": "52fe421ac3a36847f80044c3",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 882,
+        "known_for_department": "Acting",
+        "name": "Liv Tyler",
+        "original_name": "Liv Tyler",
+        "popularity": 2.8085,
+        "profile_path": "/rC6f9NoDN9l2tMgiEocIvnJi2tW.jpg",
+        "cast_id": 31,
+        "character": "Arwen",
+        "credit_id": "52fe421ac3a36847f800449b",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113,
+        "known_for_department": "Acting",
+        "name": "Christopher Lee",
+        "original_name": "Christopher Lee",
+        "popularity": 3.0661,
+        "profile_path": "/dA26fBr3t7mKqjn3OYW6kbD1LXM.jpg",
+        "cast_id": 35,
+        "character": "Saruman",
+        "credit_id": "52fe421ac3a36847f80044ab",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 48,
+        "known_for_department": "Acting",
+        "name": "Sean Bean",
+        "original_name": "Sean Bean",
+        "popularity": 3.6515,
+        "profile_path": "/tAPWubSNDEGzA3AzUAmMiBAZfCe.jpg",
+        "cast_id": 34,
+        "character": "Boromir",
+        "credit_id": "52fe421ac3a36847f80044a7",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1329,
+        "known_for_department": "Acting",
+        "name": "Billy Boyd",
+        "original_name": "Billy Boyd",
+        "popularity": 1.9103,
+        "profile_path": "/jluumxuDr7rm2f97NFf9LydBdaZ.jpg",
+        "cast_id": 37,
+        "character": "Pippin",
+        "credit_id": "52fe421ac3a36847f80044b3",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1330,
+        "known_for_department": "Acting",
+        "name": "Dominic Monaghan",
+        "original_name": "Dominic Monaghan",
+        "popularity": 2.4,
+        "profile_path": "/h3VEhi6cMaEdmmvoH3keWTv4vEb.jpg",
+        "cast_id": 38,
+        "character": "Merry",
+        "credit_id": "52fe421ac3a36847f80044b7",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 655,
+        "known_for_department": "Acting",
+        "name": "John Rhys-Davies",
+        "original_name": "John Rhys-Davies",
+        "popularity": 1.8302,
+        "profile_path": "/qpXl1YnqQsUKYEDm3BB2zK5wbhe.jpg",
+        "cast_id": 33,
+        "character": "Gimli",
+        "credit_id": "52fe421ac3a36847f80044a3",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 114,
+        "known_for_department": "Acting",
+        "name": "Orlando Bloom",
+        "original_name": "Orlando Bloom",
+        "popularity": 2.5441,
+        "profile_path": "/lwQoA0qJTCZ6l2FH6PjmhRQjiaB.jpg",
+        "cast_id": 32,
+        "character": "Legolas",
+        "credit_id": "52fe421ac3a36847f800449f",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 128,
+        "known_for_department": "Writing",
+        "name": "Philippa Boyens",
+        "original_name": "Philippa Boyens",
+        "popularity": 0.8262,
+        "profile_path": "/vfPQnrMZ87uPjyJYrSkQtqI6c0H.jpg",
+        "credit_id": "52fe421ac3a36847f8004431",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 108,
+        "known_for_department": "Directing",
+        "name": "Peter Jackson",
+        "original_name": "Peter Jackson",
+        "popularity": 2.6667,
+        "profile_path": "/bNc908d59Ba8VDNr4eCcm4G1cR.jpg",
+        "credit_id": "52fe421ac3a36847f80043ef",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 126,
+        "known_for_department": "Writing",
+        "name": "Fran Walsh",
+        "original_name": "Fran Walsh",
+        "popularity": 1.0512,
+        "profile_path": "/roXPta5fAmGzqdOIvUQbDavZy8Y.jpg",
+        "credit_id": "52fe421ac3a36847f800442b",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 108,
+        "known_for_department": "Directing",
+        "name": "Peter Jackson",
+        "original_name": "Peter Jackson",
+        "popularity": 2.6667,
+        "profile_path": "/bNc908d59Ba8VDNr4eCcm4G1cR.jpg",
+        "credit_id": "52fe421ac3a36847f8004425",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 129,
+        "known_for_department": "Writing",
+        "name": "J. R. R. Tolkien",
+        "original_name": "J. R. R. Tolkien",
+        "popularity": 0.6892,
+        "profile_path": "/U2bwiLRz8HfVXN4JJGpZBVDMRu.jpg",
+        "credit_id": "691d26489ca641775b2c9b6f",
+        "department": "Writing",
+        "job": "Novel"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Official Trailer",
+        "key": "V75dMMIW2B4",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": true,
+        "id": "fixture-trailer",
+        "published_at": "2001-01-01T00:00:00.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Mountain Pass Battle",
+        "key": "9P-9uVo4zg4",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Clip",
+        "official": true,
+        "id": "69f65ad81f282a7ccfdb3df3",
+        "published_at": "2025-12-10T15:00:16.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Middle Earth Costume Design",
+        "key": "3JlFHcFDH-w",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Behind the Scenes",
+        "official": true,
+        "id": "62ce1c99d14443004c263524",
+        "published_at": "2022-06-03T14:59:47.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Opening: One Ring to Rule Them All",
+        "key": "UXgbHdnoJrg",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Clip",
+        "official": true,
+        "id": "6209e898cb802838de065cce",
+        "published_at": "2022-02-07T21:50:21.000Z"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "PL",
+        "release_dates": [
+          {
+            "certification": "15",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2002-02-15T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "release_dates": [
+          {
+            "certification": "PG-13",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "25th Anniversary, Extended Edition",
+            "release_date": "2026-01-16T00:00:00.000Z",
+            "type": 2
+          },
+          {
+            "certification": "PG-13",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2001-12-19T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "PG-13",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "DVD / VHS",
+            "release_date": "2002-08-06T00:00:00.000Z",
+            "type": 5
+          },
+          {
+            "certification": "PG-13",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "Extended Edition",
+            "release_date": "2002-11-12T00:00:00.000Z",
+            "type": 5
+          }
+        ]
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "PL": {
+        "link": "https://www.themoviedb.org/movie/120-the-lord-of-the-rings-the-fellowship-of-the-ring/watch?locale=PL",
+        "buy": [
+          {
+            "logo_path": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png",
+            "provider_id": 2,
+            "provider_name": "Apple TV Store",
+            "display_priority": 6
+          },
+          {
+            "logo_path": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png",
+            "provider_id": 192,
+            "provider_name": "YouTube",
+            "display_priority": 8
+          },
+          {
+            "logo_path": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png",
+            "provider_id": 10,
+            "provider_name": "Amazon Video",
+            "display_priority": 27
+          },
+          {
+            "logo_path": "/xfDy4aGaOqbUqKPVQobjoJ9ZsSs.png",
+            "provider_id": 40,
+            "provider_name": "CHILI",
+            "display_priority": 32
+          },
+          {
+            "logo_path": "/872dfVu1biZISJ8rO143CZZutPR.png",
+            "provider_id": 35,
+            "provider_name": "Rakuten TV",
+            "display_priority": 35
+          },
+          {
+            "logo_path": "/1VxmGpd4KF1m74zYo4CXQEqk3Q2.png",
+            "provider_id": 2669,
+            "provider_name": "Pilot WP",
+            "display_priority": 63
+          }
+        ],
+        "flatrate": [
+          {
+            "logo_path": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
+            "provider_id": 119,
+            "provider_name": "Amazon Prime Video",
+            "display_priority": 2
+          },
+          {
+            "logo_path": "/5eZ872CghnHFLB1j8grszbrx0dx.png",
+            "provider_id": 337,
+            "provider_name": "Disney Plus",
+            "display_priority": 4
+          },
+          {
+            "logo_path": "/skypuy7SXuugIQeYg0IglmzoKaS.png",
+            "provider_id": 1899,
+            "provider_name": "HBO Max",
+            "display_priority": 38
+          }
+        ],
+        "rent": [
+          {
+            "logo_path": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png",
+            "provider_id": 2,
+            "provider_name": "Apple TV Store",
+            "display_priority": 6
+          },
+          {
+            "logo_path": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png",
+            "provider_id": 192,
+            "provider_name": "YouTube",
+            "display_priority": 8
+          },
+          {
+            "logo_path": "/8mtdz2Y3NW5NfiSZiBFhngFSy3S.png",
+            "provider_id": 505,
+            "provider_name": "Player",
+            "display_priority": 11
+          },
+          {
+            "logo_path": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png",
+            "provider_id": 10,
+            "provider_name": "Amazon Video",
+            "display_priority": 27
+          },
+          {
+            "logo_path": "/xfDy4aGaOqbUqKPVQobjoJ9ZsSs.png",
+            "provider_id": 40,
+            "provider_name": "CHILI",
+            "display_priority": 32
+          },
+          {
+            "logo_path": "/kxOtmlmiegOd6Mp766dYdp2Ois3.png",
+            "provider_id": 2102,
+            "provider_name": "Premiery Canal+",
+            "display_priority": 34
+          },
+          {
+            "logo_path": "/872dfVu1biZISJ8rO143CZZutPR.png",
+            "provider_id": 35,
+            "provider_name": "Rakuten TV",
+            "display_priority": 35
+          },
+          {
+            "logo_path": "/1VxmGpd4KF1m74zYo4CXQEqk3Q2.png",
+            "provider_id": 2669,
+            "provider_name": "Pilot WP",
+            "display_priority": 63
+          }
+        ]
+      }
+    }
+  },
+  "recommendations": {
+    "page": 1,
+    "results": [
+      {
+        "id": 1911,
+        "title": "Trzynasty Wojownik",
+        "original_title": "The 13th Warrior",
+        "overview": "Emisariusz Ibn, w którego rolę wcielił się Antonio Banderas, zostaje porwany przez grupę wojowników. Pod przymusem przyłącza się do bitwy przeciwko legendarnym stworzeniom, które pochłaniają wszystko, co stanie na ich dr",
+        "poster_path": "/zZrT0AeFnhRHzdFm6rpy6GqpJa1.jpg",
+        "backdrop_path": "/sjZIN2oDzOLGYuz21QwWw1tJ8ly.jpg",
+        "release_date": "1999-08-13",
+        "vote_average": 6.721,
+        "vote_count": 2189,
+        "genre_ids": [12, 36, 28],
+        "popularity": 5.6704,
+        "media_type": "movie"
+      },
+      {
+        "id": 9387,
+        "title": "Conan Barbarzyńca",
+        "original_title": "Conan the Barbarian",
+        "overview": "Niewolnik. Wojownik. Bohater. Legenda. Arnold Schwarzenegger debiutuje na ekranie w roli legendarnego wojownika i bohatera - Conana Barbarzyńcy. Osierocony w dzieciństwie Conan poprzysięga zemstę mordercom rodziców - ban",
+        "poster_path": "/1YOfYCWITyypUzdxBLTzTBrVjC.jpg",
+        "backdrop_path": "/fNp2ikvY8WZTyVbK1iXW84RLbO5.jpg",
+        "release_date": "1982-03-16",
+        "vote_average": 6.8,
+        "vote_count": 3003,
+        "genre_ids": [12, 14, 28],
+        "popularity": 7.811,
+        "media_type": "movie"
+      },
+      {
+        "id": 11828,
+        "title": "Wiking Eryk",
+        "original_title": "Erik the Viking",
+        "overview": "Eryk, młody wódz wikingów, postanawia zebrać najlepszych wojowników ze swojej wioski i wraz z nimi wyrusza na wielką i niebezpieczną wyprawę. Jej celem jest przebłaganie bogów, aby zechcieli zakończyć zły i ponury okres ",
+        "poster_path": "/tRaNvLehJf0OVsBexo4u4NRKLJ4.jpg",
+        "backdrop_path": "/rZlMfuYPGxtyxOUzNLLF4iyM0lF.jpg",
+        "release_date": "1989-09-01",
+        "vote_average": 5.9,
+        "vote_count": 267,
+        "genre_ids": [12, 14, 35],
+        "popularity": 2.2495,
+        "media_type": "movie"
+      },
+      {
+        "id": 11527,
+        "title": "Wieki ciemne",
+        "original_title": "Excalibur",
+        "overview": "Rzecz dzieje się w zamierzchłej przeszłości. Potężny czarodziej Merlin pomaga Utherowi Pendragonowi w zdobyciu korony. Gdy jego syn Artur obejmuje sukcesję, również i on może pokonać przy pomocy Merlina swych wrogów. Pow",
+        "poster_path": "/cTWF6zkr5mUOnheowKODIijWYcN.jpg",
+        "backdrop_path": "/qrnNj4lCPcBzmeOaHb7pLV9JKyg.jpg",
+        "release_date": "1981-04-10",
+        "vote_average": 7,
+        "vote_count": 1237,
+        "genre_ids": [12, 14],
+        "popularity": 4.4978,
+        "media_type": "movie"
+      },
+      {
+        "id": 639933,
+        "title": "Wiking",
+        "original_title": "The Northman",
+        "overview": "Młody książę Amleth jest u progu stania się mężczyzną, gdy jego ojciec, król Aurvandil War Raven, zostaje brutalnie zamordowany przez wuja Fjolnira, który porywa matkę chłopca - księżną Gudrún. Uciekając łodzią ze swojeg",
+        "poster_path": "/eyFLed4sQ9Su6jQ0S79uUvIB6JZ.jpg",
+        "backdrop_path": "/fMiEp00v8gGWEceL4QeLu6H6z69.jpg",
+        "release_date": "2022-04-07",
+        "vote_average": 7.019,
+        "vote_count": 5414,
+        "genre_ids": [28, 12, 14],
+        "popularity": 8.4922,
+        "media_type": "movie"
+      },
+      {
+        "id": 666750,
+        "title": "Ostatni smok: Zemsta",
+        "original_title": "Dragonheart: Vengeance",
+        "overview": "Lukas, młody farmer, wiedzie spokojne życie na wsi. Niestety siekanka nie trwa wiecznie, rodzina naszego bohatera zostaje zamordowana przez bandę  łupieżców. Lukas wyrusza więc by pomścić swoich bliskich. Do wyprawy dołą",
+        "poster_path": "/qs6gz6atyQcAvqC6qZaslOjliUG.jpg",
+        "backdrop_path": "/mUhPYDfXm8F6wdFifDLl8E2jUpu.jpg",
+        "release_date": "2021-03-01",
+        "vote_average": 6.865,
+        "vote_count": 155,
+        "genre_ids": [14, 28, 12],
+        "popularity": 4.0663,
+        "media_type": "movie"
+      },
+      {
+        "id": 37861,
+        "title": "Valhalla: Mroczny wojownik",
+        "original_title": "Valhalla Rising",
+        "overview": "Przez lata, Jednooki, niemy wojownik o wielkiej sile, był jeńcem wodza Barde. Z pomocą chłopca imieniem Are, zabija go i razem uciekają w samo serce mroku. Uciekając przed łowcami nagród, Jednooki i Are dostają się na po",
+        "poster_path": "/7LBMcAx6XHwEduIsBYipvUke9n.jpg",
+        "backdrop_path": "/90IuSXiKgOap8w8JYyQQoCJMaQh.jpg",
+        "release_date": "2010-03-10",
+        "vote_average": 6.108,
+        "vote_count": 1409,
+        "genre_ids": [12, 18, 28, 14],
+        "popularity": 2.4045,
+        "media_type": "movie"
+      },
+      {
+        "id": 561,
+        "title": "Constantine",
+        "original_title": "Constantine",
+        "overview": "Łowca demonów John Constantine, w tej roli Keanu Reeves - gwiazda trylogii Matrix - staje do walki z nowym demonicznym wrogiem. Akcja tego niezwykłego thrillera, ekranizacji wydanego przez DV Comics/Vertigo komiksu. Hell",
+        "poster_path": "/vPYgvd2MwHlxTamAOjwVQp4qs1W.jpg",
+        "backdrop_path": "/26OvB15pqk3eiKJG8LrXDVzO7Mw.jpg",
+        "release_date": "2005-02-08",
+        "vote_average": 7.216,
+        "vote_count": 8741,
+        "genre_ids": [14, 28, 27],
+        "popularity": 12.8866,
+        "media_type": "movie"
+      }
+    ],
+    "total_pages": 15,
+    "total_results": 297
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/oiwc338EoBgS4sEI2ixAny4KQKg.jpg",
+        "vote_average": 5.25,
+        "vote_count": 16,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/z51Wzj94hvAIsWfknifKTqKJRwp.jpg",
+        "vote_average": 5.25,
+        "vote_count": 18,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 977,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/zzIdXP769uYxQq6rK9plfeoVdTo.jpg",
+        "vote_average": 4.934,
+        "vote_count": 15,
+        "width": 1737
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ua5EHfleb44L5hfHPs2BPqRAove.jpg",
+        "vote_average": 4.572,
+        "vote_count": 21,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/a0lfia8tk8ifkrve0Tn8wkISUvs.jpg",
+        "vote_average": 4.572,
+        "vote_count": 21,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/x2RS3uTcsJJ9IfjNPcgDmukoEcQ.jpg",
+        "vote_average": 4.572,
+        "vote_count": 21,
+        "width": 3840
+      }
+    ],
+    "posters": []
+  }
+}

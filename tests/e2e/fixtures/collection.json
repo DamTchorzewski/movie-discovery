@@ -1,0 +1,53 @@
+{
+  "id": 119,
+  "name": "Władca Pierścieni - Kolekcja",
+  "original_language": "en",
+  "original_name": "The Lord of the Rings Collection",
+  "overview": "Trylogia Władca Pierścieni składa się z trzech epickich filmów fantastycznych, opartych na wpływowych powieściach napisanych przez J. R. R. Tolkiena, w reżyserii Petera Jacksona.",
+  "poster_path": "/nBlZt9pCo1xjVIO11HfbVugcGb6.jpg",
+  "backdrop_path": "/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg",
+  "parts": [
+    {
+      "id": 120,
+      "title": "Władca Pierścieni: Drużyna Pierścienia",
+      "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+      "overview": "Ekranizacja pierwszej części trylogii Tolkiena, \"Drużyna Pierścienia\" zapoznaje widzów z czarodziejskim światem Śródziemia i jego mieszkańcami - ludźmi, hobbitami, elfami, krasnoludami, czarodziejami, trollami i orkami. ",
+      "poster_path": "/bjWRzhXUXTNPnwptBkXQzCflVBE.jpg",
+      "backdrop_path": "/oiwc338EoBgS4sEI2ixAny4KQKg.jpg",
+      "release_date": "2001-12-18",
+      "vote_average": 8.452,
+      "vote_count": 28919,
+      "genre_ids": [12, 14, 28],
+      "popularity": 37.8343,
+      "media_type": "movie"
+    },
+    {
+      "id": 121,
+      "title": "Władca Pierścieni: Dwie wieże",
+      "original_title": "The Lord of the Rings: The Two Towers",
+      "overview": "Mrok gęstnieje nad światem. Po rozpadzie drużyny cel misji staje się coraz bardziej odległy. Frodo i Sam wędrują samotnie do Mordoru. Na ich drodze staje jednak Gollum, dawny właściciel pierścienia. Gandalf zwycięża Barl",
+      "poster_path": "/4oDm6P1FUAegMFfQBVhWIkNcaqk.jpg",
+      "backdrop_path": "/58xrLn8VXDJSMntMESUyG4Pe1Ro.jpg",
+      "release_date": "2002-12-18",
+      "vote_average": 8.434,
+      "vote_count": 25026,
+      "genre_ids": [12, 14, 28],
+      "popularity": 26.967,
+      "media_type": "movie"
+    },
+    {
+      "id": 122,
+      "title": "Władca Pierścieni: Powrót króla",
+      "original_title": "The Lord of the Rings: The Return of the King",
+      "overview": "Ostateczna bitwa o Śródziemie rozpoczęła się. Frodo i Sam, prowadzeni przez Golluma, kontynuują swą niebezpieczną wyprawę w kierunku Góry Przeznaczenia, w celu zniszczenia Pierścienia Władzy. Aragorn walczy, aby wypełnić",
+      "poster_path": "/75KNIheWdy7eLe4RWsbJmVjvJPU.jpg",
+      "backdrop_path": "/ctiw6FZK4N36LmkjSklWEbuvlq9.jpg",
+      "release_date": "2003-12-17",
+      "vote_average": 8.508,
+      "vote_count": 27875,
+      "genre_ids": [12, 14, 28],
+      "popularity": 34.0033,
+      "media_type": "movie"
+    }
+  ]
+}

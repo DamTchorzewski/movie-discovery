@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "provider_id": 8,
+      "provider_name": "Netflix",
+      "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+      "display_priorities": {
+        "PL": 0
+      }
+    },
+    {
+      "provider_id": 119,
+      "provider_name": "Amazon Prime Video",
+      "logo_path": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
+      "display_priorities": {
+        "PL": 2
+      }
+    },
+    {
+      "provider_id": 350,
+      "provider_name": "Apple TV",
+      "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+      "display_priorities": {
+        "PL": 3
+      }
+    },
+    {
+      "provider_id": 337,
+      "provider_name": "Disney Plus",
+      "logo_path": "/5eZ872CghnHFLB1j8grszbrx0dx.png",
+      "display_priorities": {
+        "PL": 4
+      }
+    },
+    {
+      "provider_id": 1773,
+      "provider_name": "SkyShowtime",
+      "logo_path": "/ube1pVpP3FklRkeyQjlDkkC3tL2.png",
+      "display_priorities": {
+        "PL": 7
+      }
+    },
+    {
+      "provider_id": 505,
+      "provider_name": "Player",
+      "logo_path": "/8mtdz2Y3NW5NfiSZiBFhngFSy3S.png",
+      "display_priorities": {
+        "PL": 11
+      }
+    },
+    {
+      "provider_id": 2101,
+      "provider_name": "CANAL+",
+      "logo_path": "/sCJWqnuSssjoIvfiaERv2u5YPa6.png",
+      "display_priorities": {
+        "PL": 33
+      }
+    },
+    {
+      "provider_id": 1899,
+      "provider_name": "HBO Max",
+      "logo_path": "/skypuy7SXuugIQeYg0IglmzoKaS.png",
+      "display_priorities": {
+        "PL": 38
+      }
+    },
+    {
+      "provider_id": 2214,
+      "provider_name": "CDA Premium",
+      "logo_path": "/19i0ihHvFzvK0GF5qQ6Wc4UnkOf.png",
+      "display_priorities": {
+        "PL": 42
+      }
+    },
+    {
+      "provider_id": 2363,
+      "provider_name": "Polsat Box Go",
+      "logo_path": "/en9BC8BR1Sm0lNdKhHkw5hWqvSH.png",
+      "display_priorities": {
+        "PL": 46
+      }
+    }
+  ]
+}

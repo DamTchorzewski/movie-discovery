@@ -160,7 +160,10 @@ export const libraryActions = {
   refresh(movie: MovieDetails) {
     const current = library[movie.id];
     if (!current) return;
-    commit({ ...library, [movie.id]: { ...current, ...snapshot(movie) } });
+    const next = { ...current, ...snapshot(movie) };
+    // only a real change is written: an effect may call this on every render
+    if (JSON.stringify(next) === JSON.stringify(current)) return;
+    commit({ ...library, [movie.id]: next });
   },
   remove(id: number): LibraryEntry | undefined {
     const current = library[id];

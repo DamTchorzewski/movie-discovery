@@ -152,12 +152,14 @@ function Header() {
               type="button"
               onClick={openSearch}
               className="btn btn-ghost btn-icon sm:w-auto sm:min-w-56 sm:justify-start sm:px-4 sm:font-normal sm:text-muted"
-              aria-label={t.search.label}
               aria-keyshortcuts="Control+K"
             >
               <Search className="size-5 shrink-0" aria-hidden="true" />
-              <span className="hidden sm:inline">{t.search.placeholder}</span>
-              <kbd className="ml-auto hidden rounded-md border border-line px-1.5 py-0.5 font-sans text-xs lg:inline">
+              <span className="sr-only sm:not-sr-only">{t.search.label}</span>
+              <kbd
+                aria-hidden="true"
+                className="ml-auto hidden rounded-md border border-line px-1.5 py-0.5 font-sans text-xs lg:inline"
+              >
                 {t.search.shortcut}
               </kbd>
             </button>
