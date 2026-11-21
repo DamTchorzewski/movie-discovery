@@ -2,9 +2,17 @@
 
 Choices that a reader of the code might question, with the reason. Newest first.
 
+## 2026-11-21: one name, Frame
+
+The rebuild was first called **Kadr** (Polish for a film still), then Kadr in Polish and Frame in English. It is now
+**Frame** in both languages: one name, one mark (an F cut out of a lit still) and one favicon, which a name per language
+could not have. The brand is in [design.md](design.md). The keys in localStorage (`kadr.theme`, `kadr.library.v1`) and
+the `"app": "kadr"` field of an exported library keep the old word on purpose: renaming them would lose the saved
+library and reject earlier export files.
+
 ## 2026-11-21: a new repository and a new name
 
-The rebuild is a new product, **Kadr**, in a new repository, `movie-discovery`. The team project
+The rebuild is a new product, now **Frame**, in a new repository, `movie-discovery`. The team project
 `tmdb-movie-browser` (Filmoteka) stays as the team left it; this repository carries its history. The library of the
 first version is moved over on the first visit (the same origin, `damtchorzewski.github.io`, so the old `watched` and
 `queue` keys in localStorage are readable).
@@ -29,7 +37,7 @@ be added later without changing the data shape (`src/lib/library-schema.ts`).
 
 ## A service worker for the app shell only
 
-`reops/standards/performance.md` says client sites have no service worker. Kadr is an installable app (PWA), so it has
+`reops/standards/performance.md` says client sites have no service worker. Frame is an installable app (PWA), so it has
 one, kept minimal (`public/sw.js`): the HTML is **network first** (a release is never hidden behind a stale page; the
 cached copy is used only offline) and the hashed build files are cache first. TMDB data and images are not cached by
 it.

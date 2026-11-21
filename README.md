@@ -1,15 +1,15 @@
-# Kadr
+# Frame
 
 **A cinematic movie discovery app on the TMDB API, in Polish and English.**
 
-> **Status:** version 1 of Kadr is being built on `feat/app-redesign`. The logo, the favicon and the README images
-> (banner, showcase, screenshots from `tools/readme-images`) come with the brand work; the mark in the app is temporary.
+> **Status:** version 1 of Frame is being built. The brand (mark, favicon, app icons, social image) is in
+> [docs/design.md](docs/design.md); the README images (banner, showcase, screenshots from `tools/readme-images`) come next.
 
 ## About
 
 <a href="https://damtchorzewski.github.io/movie-discovery/">Open the live site</a>
 
-**Kadr** (Polish for a film still) helps you find a film, see where to watch it in Poland and decide what to watch
+**Frame** helps you find a film, see where to watch it in Poland and decide what to watch
 tonight. It grew out of [Filmoteka](https://github.com/DamTchorzewski/tmdb-movie-browser), a team project of HiFiveTeam,
 and is rebuilt from scratch as a single-page app with React and TypeScript.
 
@@ -24,7 +24,7 @@ and is rebuilt from scratch as a single-page app with React and TypeScript.
 - **People and collections.** Biography, known for and the filmography by role; a saga in order with your progress.
 - **My films.** A watchlist and a watched list with your rating (1-10), a note and the date; stats (films, hours, average
   rating, favourite genre); export to and import from a JSON file. The lists of the first Filmoteka are moved over.
-- **Tonight.** Pick a mood, the time you have, your services and a minimum rating; Kadr shuffles the posters and draws
+- **Tonight.** Pick a mood, the time you have, your services and a minimum rating; Frame shuffles the posters and draws
   one film, from your watchlist or from all films.
 - **Polish and English.** Polish at `/`, English at `/en/`, the same page in the other language one click away.
 - **Dark, light or system theme**, installable as an app (manifest and an app-shell service worker).
@@ -71,6 +71,7 @@ Requirements: Node.js 22 (`.nvmrc`) and pnpm 11.18 (`packageManager`).
 | `pnpm e2e:install`             | install the Chromium that Playwright uses                                        |
 | `pnpm health`                  | read-only check of the live site (`SITE_URL=...`)                                |
 | `pnpm format`, `pnpm lint:fix` | fix formatting and lint problems                                                 |
+| `node scripts/brand.mjs`       | regenerate the favicon, the icons, `og.png` and the lockups from the mark        |
 
 ## Configuration
 
@@ -90,13 +91,17 @@ src/main.tsx, router.tsx     entry, TanStack Query and the routes (Polish at /, 
 src/i18n/messages.ts         ★ every interface text in Polish and English
 src/lib/                     TMDB client and queries, Discover filters, library store and schema, tonight picker
 src/components/              app shell, search palette, hero, rails, poster and person cards, dialogs, states
+src/components/illustrations/ line illustrations for the empty states (reel, ticket, search, cut, key)
+src/brand/mark.ts            ★ the mark: the one drawing the logo, the favicon and the icons come from
 src/pages/                   one file per page: home, discover, search, film, person, collection, my films, tonight, about
 src/styles/app.css           ★ design tokens (both themes), components, motion
 src/assets/team/             photos of HiFiveTeam for the About page
-public/                      favicon, manifest, icons, service worker
+public/                      favicon, manifest, icons, social image, service worker
+brand/                       lockups of the mark and the wordmark for dark and light backgrounds (SVG, PNG)
 tests/e2e/                   Playwright specs, helpers and the TMDB fixtures
 scripts/health.mjs           live-site check run after a deploy
-docs/                        deployment, decisions, repository settings
+scripts/brand.mjs            writes the favicon, icons, social image and lockups from src/brand/mark.ts
+docs/                        brand and design, deployment, decisions, repository settings
 .github/workflows/           ci.yml (pull requests), deploy.yml (develop build, main deploy)
 ```
 
@@ -108,19 +113,20 @@ in English, a work PR into `develop` and a release PR into `main`. CI runs on ev
 
 **Departures from the standards (and why):**
 
-- **A service worker** although client sites have none: Kadr is an installable app; it caches only the app shell and
+- **A service worker** although client sites have none: Frame is an installable app; it caches only the app shell and
   keeps HTML network first ([docs/decisions.md](docs/decisions.md)).
 - **A public API key in the bundle:** a static site has no server and TMDB cannot restrict a key to a domain; it is a
   repository variable, never committed ([docs/decisions.md](docs/decisions.md)).
 - **The CSP is a `<meta>`, the other security headers are missing:** GitHub Pages cannot send headers; the meta CSP
   carries the hash of the one inline script.
-- **README images** are missing until the brand is done; they will come from `tools/readme-images` (profile
+- **README images** are still missing; now that the brand is done they will come from `tools/readme-images` (profile
   `movie-discovery`).
 
 ## Documentation
 
 | File                                     | What it covers                                                                        |
 | ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| [docs/design.md](docs/design.md)         | the brand: name, mark, palette, type, usage, the generated files                      |
 | [docs/deployment.md](docs/deployment.md) | workflows, variables, Pages paths, CSP, health check, rollback                        |
 | [docs/decisions.md](docs/decisions.md)   | why a new repository, a SPA, the key in the browser, localStorage, the service worker |
 | [docs/repository.md](docs/repository.md) | GitHub description, topics and settings, and the command that sets them               |
@@ -129,8 +135,8 @@ Local working files (exports, archived images of the first version) live in `.sc
 
 ## Team
 
-Kadr grew out of **Filmoteka**, built by HiFiveTeam; the roles are the ones the team wrote down. The rebuild as Kadr is
-by Damian Tchorzewski.
+Frame grew out of **Filmoteka**, built by HiFiveTeam; the roles are the ones the team wrote down. The rebuild as Frame
+is by Damian Tchorzewski.
 
 | Member                                                     | Role and work                                                                                                                        |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
