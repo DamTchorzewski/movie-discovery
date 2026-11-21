@@ -1,0 +1,26 @@
+{
+  "name": "Kadr",
+  "short_name": "Kadr",
+  "description": "Odkrywaj filmy, sprawdzaj gdzie je obejrzeć w Polsce i losuj film na wieczór.",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0a0c",
+  "theme_color": "#0b0a0c",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "Co dziś obejrzeć?", "url": "./tonight/" },
+    { "name": "Moje filmy", "url": "./library/" }
+  ]
+}
