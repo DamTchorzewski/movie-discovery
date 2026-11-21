@@ -1,34 +1,81 @@
 {
-  "name": "tmdb-movie-browser",
-  "version": "2.0.0",
-  "description": "",
-  "homepage": "https://damtchorzewski.github.io/tmdb-movie-browser/",
-  "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /tmdb-movie-browser/"
-  },
+  "name": "movie-discovery",
+  "version": "1.0.0",
+  "description": "Kadr: a cinematic movie discovery app on the TMDB API, in Polish and English, with where to watch in Poland, a watchlist with ratings and a pick for tonight.",
+  "author": "DamReboot IT Damian Chabracki",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "homepage": "https://damtchorzewski.github.io/movie-discovery/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DamTchorzewski/tmdb-movie-browser.git"
+    "url": "git+https://github.com/DamTchorzewski/movie-discovery.git"
   },
-  "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DamTchorzewski/tmdb-movie-browser/issues"
+    "url": "https://github.com/DamTchorzewski/movie-discovery/issues"
   },
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "health": "node scripts/health.mjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,mjs,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json,css,yml,html}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@11.18.0",
   "dependencies": {
-    "basiclightbox": "^5.0.4",
-    "handlebars": "^4.7.7",
-    "modern-normalize": "^1.1.0",
-    "notiflix": "^3.2.6",
-    "tui-pagination": "^3.4.1"
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/hanken-grotesk": "^5.3.0",
+    "@tanstack/react-query": "^5.108.1",
+    "@tanstack/react-router": "^1.170.46",
+    "lucide-react": "^1.76.0",
+    "motion": "^14.14.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "^2.6.0",
-    "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+    "@axe-core/playwright": "^4.14.0",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.8",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.1",
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
 }

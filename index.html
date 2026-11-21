@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Kadr: odkrywaj filmy, sprawdzaj gdzie obejrzeć</title>
+    <meta
+      name="description"
+      content="Kinowa przeglądarka filmów: trendy, wyszukiwanie z filtrami, gdzie obejrzeć w Polsce, lista do obejrzenia i losowanie filmu na wieczór."
+    />
+    <meta name="theme-color" content="#0b0a0c" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="%BASE_URL%icons/apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+    <link rel="preconnect" href="https://image.tmdb.org" crossorigin />
+    <link rel="preconnect" href="https://api.themoviedb.org" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kadr" />
+    <meta
+      property="og:description"
+      content="Odkrywaj filmy, sprawdzaj gdzie je obejrzeć w Polsce i losuj film na wieczór."
+    />
+    <meta property="og:image" content="%BASE_URL%og.png" />
+    <!-- The saved theme and the language before the first paint, so nothing flashes. -->
+    <script>
+      try {
+        var t = localStorage.getItem("kadr.theme");
+        if (t !== "light" && t !== "system") t = "dark";
+        if (t !== "system") document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+      if (/\/en(\/|$)/.test(location.pathname)) document.documentElement.lang = "en";
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Kadr needs JavaScript. Kadr wymaga JavaScriptu.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
