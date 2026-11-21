@@ -1,66 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { useI18n } from "../i18n";
+import { illustrations } from "./illustrations";
 
-// Line illustrations for the empty states: placeholders until the design chat delivers the set.
-type Art = "reel" | "ticket" | "search" | "cut" | "key";
+type Art = keyof typeof illustrations;
 
 function Illustration({ art }: { art: Art }) {
-  const common = {
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 2,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-  };
-  return (
-    <svg viewBox="0 0 160 120" className="h-28 w-auto text-muted" aria-hidden="true">
-      <ellipse cx="80" cy="108" rx="54" ry="6" fill="var(--color-raised)" />
-      {art === "reel" && (
-        <g {...common}>
-          <circle cx="62" cy="58" r="34" />
-          <circle cx="62" cy="58" r="6" stroke="var(--color-accent)" />
-          {[0, 72, 144, 216, 288].map((a) => (
-            <circle
-              key={a}
-              cx={62 + 19 * Math.cos((a * Math.PI) / 180)}
-              cy={58 + 19 * Math.sin((a * Math.PI) / 180)}
-              r="7"
-            />
-          ))}
-          <path d="M96 62c14 4 26 14 34 30" stroke="var(--color-accent)" />
-        </g>
-      )}
-      {art === "ticket" && (
-        <g {...common}>
-          <path d="M34 36h92v14a10 10 0 0 0 0 20v14H34V70a10 10 0 0 0 0-20Z" />
-          <path d="M100 38v44" strokeDasharray="4 5" />
-          <path d="M50 54h34M50 66h22" stroke="var(--color-accent)" />
-        </g>
-      )}
-      {art === "search" && (
-        <g {...common}>
-          <circle cx="70" cy="54" r="28" />
-          <path d="m91 75 22 22" strokeWidth="5" />
-          <path d="M58 48a14 14 0 0 1 14-8" stroke="var(--color-accent)" />
-        </g>
-      )}
-      {art === "cut" && (
-        <g {...common}>
-          <rect x="30" y="30" width="100" height="56" rx="6" />
-          <path d="M30 42h100M30 74h100" />
-          <path d="m62 30 10 56M88 30 98 86" stroke="var(--color-accent)" strokeDasharray="5 5" />
-        </g>
-      )}
-      {art === "key" && (
-        <g {...common}>
-          <circle cx="58" cy="58" r="20" />
-          <circle cx="58" cy="58" r="6" stroke="var(--color-accent)" />
-          <path d="M78 58h50M112 58v14M124 58v10" />
-        </g>
-      )}
-    </svg>
-  );
+  const Art = illustrations[art];
+  return <Art className="h-28 w-auto text-muted" />;
 }
 
 export function EmptyState({
