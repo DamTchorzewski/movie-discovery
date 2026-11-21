@@ -1,0 +1,99 @@
+# CI: format, lint, types and unit tests, then the end-to-end tests (reops/standards/workflows.md).
+#
+# Triggers:
+#   - pull request (not a draft) → the full check, e2e included,
+#   - manual run                 → the same,
+#   - called by deploy.yml       → with `e2e: true` on main only (develop repeats a commit its pull request passed).
+# A change to the documentation alone starts nothing.
+# Secrets: none. The e2e tests answer every TMDB request from tests/e2e/fixtures with a fake key, so fork
+# pull requests can run them.
+# Standard: reops/standards/workflows.md (global, outside this repo)
+
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "LICENSE"
+      - "**/.env.example"
+      - ".github/dependabot.yml"
+      - ".github/PULL_REQUEST_TEMPLATE/**"
+      - ".scratch/**"
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      e2e:
+        type: boolean
+        default: true
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.workflow == 'CI' }}
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Format, lint, types, unit
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft != true
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check
+        run: pnpm check
+
+  e2e:
+    name: End-to-end (desktop and phone)
+    needs: quality
+    # skipped only when deploy.yml calls it for a push to develop (its pull request already ran it)
+    if: inputs.e2e != false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache the Playwright browser
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Install the Playwright browser
+        run: pnpm e2e:install
+
+      - name: End-to-end tests
+        run: pnpm test:e2e
+
+      - name: Upload the report (failure only)
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: playwright-report-${{ github.run_id }}
+          path: playwright-report
+          retention-days: 7
