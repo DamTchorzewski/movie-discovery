@@ -1,7 +1,7 @@
 {
   "name": "movie-discovery",
   "version": "1.0.0",
-  "description": "Kadr: a cinematic movie discovery app on the TMDB API, in Polish and English, with where to watch in Poland, a watchlist with ratings and a pick for tonight.",
+  "description": "Frame: a cinematic movie discovery app on the TMDB API, in Polish and English, with where to watch in Poland, a watchlist with ratings and a pick for tonight.",
   "author": "DamReboot IT Damian Chabracki",
   "license": "MIT",
   "private": true,

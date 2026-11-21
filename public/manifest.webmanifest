@@ -1,6 +1,6 @@
 {
-  "name": "Kadr",
-  "short_name": "Kadr",
+  "name": "Frame",
+  "short_name": "Frame",
   "description": "Odkrywaj filmy, sprawdzaj gdzie je obejrzeć w Polsce i losuj film na wieczór.",
   "lang": "pl",
   "start_url": "./",

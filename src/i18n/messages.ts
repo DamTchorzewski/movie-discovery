@@ -15,10 +15,10 @@ function plural(locale: string, forms: Partial<Record<Intl.LDMLPluralRule, strin
 }
 
 const pl = {
-  // the product name: Polish "Kadr" (a film still), English "Frame"; the brand work may make it one name
-  brand: "Kadr",
+  // the product name, the same in every language (docs/design.md)
+  brand: "Frame",
   meta: {
-    title: "Kadr: odkrywaj filmy, sprawdzaj gdzie obejrzeć",
+    title: "Frame: odkrywaj filmy, sprawdzaj gdzie obejrzeć",
     description:
       "Kinowa przeglądarka filmów: trendy, wyszukiwanie z filtrami, gdzie obejrzeć w Polsce, lista do obejrzenia i losowanie filmu na wieczór.",
   },
@@ -234,7 +234,7 @@ const pl = {
       many: "Zaimportowano # filmów.",
       other: "Zaimportowano # filmu.",
     }),
-    importError: "Tego pliku nie da się wczytać. Wybierz plik wyeksportowany z Kadru.",
+    importError: "Tego pliku nie da się wczytać. Wybierz plik wyeksportowany z aplikacji Frame.",
     migrated: plural("pl", {
       one: "Przenieśliśmy # film z pierwszej wersji (Filmoteka).",
       few: "Przenieśliśmy # filmy z pierwszej wersji (Filmoteka).",
@@ -276,7 +276,7 @@ const pl = {
   },
   about: {
     title: "O projekcie",
-    lead: "Kadr to aplikacja do odkrywania filmów oparta na API The Movie Database. Wyrosła z Filmoteki, projektu zespołu HiFiveTeam; ta wersja to przebudowa od zera w React i TypeScript.",
+    lead: "Frame to aplikacja do odkrywania filmów oparta na API The Movie Database. Wyrosła z Filmoteki, projektu zespołu HiFiveTeam; ta wersja to przebudowa od zera w React i TypeScript.",
     team: "Zespół HiFiveTeam",
     data: "Dane i obrazy",
     dataText:
@@ -288,7 +288,7 @@ const pl = {
   },
   footer: {
     tmdb: "Dane: The Movie Database (TMDB)",
-    made: "Kadr · wyrósł z Filmoteki zespołu HiFiveTeam",
+    made: "Frame · następca Filmoteki zespołu HiFiveTeam",
     install: "Zainstaluj aplikację",
   },
   common: {
@@ -301,7 +301,7 @@ const pl = {
     backHome: "Wróć na start",
     noKeyTitle: "Brakuje klucza TMDB",
     noKeyText:
-      "Ta kopia Kadru nie ma klucza API. Ustaw zmienną VITE_TMDB_API_KEY (patrz .env.example) i zbuduj aplikację ponownie.",
+      "Ta kopia aplikacji Frame nie ma klucza API. Ustaw zmienną VITE_TMDB_API_KEY (patrz .env.example) i zbuduj aplikację ponownie.",
     minutes: (n: number) => {
       const h = Math.floor(n / 60);
       const m = n % 60;
