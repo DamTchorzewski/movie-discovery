@@ -15,6 +15,8 @@ function plural(locale: string, forms: Partial<Record<Intl.LDMLPluralRule, strin
 }
 
 const pl = {
+  // the product name: Polish "Kadr" (a film still), English "Frame"; the brand work may make it one name
+  brand: "Kadr",
   meta: {
     title: "Kadr: odkrywaj filmy, sprawdzaj gdzie obejrzeć",
     description:
@@ -314,8 +316,9 @@ const pl = {
 export type Messages = typeof pl;
 
 const en = {
+  brand: "Frame",
   meta: {
-    title: "Kadr: discover films, find where to watch",
+    title: "Frame: discover films, find where to watch",
     description:
       "A cinematic movie browser: trends, search with filters, where to watch in Poland, a watchlist and a pick for tonight.",
   },
@@ -516,7 +519,7 @@ const en = {
     export: "Export (JSON)",
     import: "Import from a file",
     imported: plural("en", { one: "Imported # film.", other: "Imported # films." }),
-    importError: "This file can't be read. Choose a file exported from Kadr.",
+    importError: "This file can't be read. Choose a file exported from Frame.",
     migrated: plural("en", {
       one: "We moved # film over from the first version (Filmoteka).",
       other: "We moved # films over from the first version (Filmoteka).",
@@ -556,7 +559,7 @@ const en = {
   },
   about: {
     title: "About",
-    lead: "Kadr is a movie discovery app on The Movie Database API. It grew out of Filmoteka, a project of HiFiveTeam; this version is a rebuild from scratch in React and TypeScript.",
+    lead: "Frame is a movie discovery app on The Movie Database API. It grew out of Filmoteka, a project of HiFiveTeam; this version is a rebuild from scratch in React and TypeScript.",
     team: "HiFiveTeam",
     data: "Data and images",
     dataText:
@@ -568,7 +571,7 @@ const en = {
   },
   footer: {
     tmdb: "Data: The Movie Database (TMDB)",
-    made: "Kadr · grown out of Filmoteka by HiFiveTeam",
+    made: "Frame · grown out of Filmoteka by HiFiveTeam",
     install: "Install the app",
   },
   common: {
@@ -581,7 +584,7 @@ const en = {
     backHome: "Back to home",
     noKeyTitle: "The TMDB key is missing",
     noKeyText:
-      "This copy of Kadr has no API key. Set VITE_TMDB_API_KEY (see .env.example) and build the app again.",
+      "This copy of Frame has no API key. Set VITE_TMDB_API_KEY (see .env.example) and build the app again.",
     minutes: (n: number) => {
       const h = Math.floor(n / 60);
       const m = n % 60;

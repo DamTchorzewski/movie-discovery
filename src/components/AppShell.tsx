@@ -127,7 +127,7 @@ function Header() {
             to="/{-$lang}/"
             params={{ lang: langParam }}
             className="-ml-1 rounded-lg p-1"
-            aria-label={`Kadr, ${t.nav.home}`}
+            aria-label={`${t.brand}, ${t.nav.home}`}
           >
             <Wordmark />
           </Link>
