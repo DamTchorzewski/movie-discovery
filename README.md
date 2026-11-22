@@ -1,13 +1,17 @@
-# Frame
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.png">
+    <img src="docs/images/banner-light.png" alt="Frame: a movie discovery app on the TMDB API" width="100%">
+  </picture>
+</p>
 
-**A cinematic movie discovery app on the TMDB API, in Polish and English.**
-
-> **Status:** version 1 of Frame is being built. The brand (mark, favicon, app icons, social image) is in
-> [docs/design.md](docs/design.md); the README images (banner, showcase, screenshots from `tools/readme-images`) come next.
+<p align="center">
+  <img src="docs/images/showcase.jpg" alt="Frame on a desktop and on a phone: the trending hero and a film page" width="100%">
+</p>
 
 ## About
 
-<a href="https://damtchorzewski.github.io/movie-discovery/">Open the live site</a>
+<a href="https://damtchorzewski.github.io/movie-discovery/"><img src="docs/images/open-site.png" alt="Open the live site" width="130"></a>
 
 **Frame** helps you find a film, see where to watch it in Poland and decide what to watch
 tonight. It grew out of [Filmoteka](https://github.com/DamTchorzewski/tmdb-movie-browser), a team project of HiFiveTeam,
@@ -31,6 +35,9 @@ and is rebuilt from scratch as a single-page app with React and TypeScript.
 - **Accessible.** WCAG 2.2 AA in both themes, tested with axe on every page template; keyboard and screen reader
   friendly dialogs; `prefers-reduced-motion` respected.
 
+> **Status:** version 1 of Frame is built; the live site waits for the TMDB key as a repository variable
+> ([docs/deployment.md](docs/deployment.md)), so the button below works after the first deploy of `main`.
+
 ## Tech stack
 
 |         |                                                                                                                       |
@@ -45,6 +52,18 @@ The interface is in Polish and English; code, commits and documentation are in E
 
 Third-party code at run time: the TMDB API and images (`api.themoviedb.org`, `image.tmdb.org`) and, only after a click on
 "Play trailer", the YouTube player in privacy-enhanced mode (`www.youtube-nocookie.com`). No analytics, no cookies.
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/images/desktop-themes.jpg" alt="The home page in the dark theme and a film page in the light theme" width="100%">
+</p>
+
+<p align="center">
+  <img src="docs/images/mobile.jpg" alt="Four phone screens: home, a film page, Discover in the light theme and Tonight" width="100%">
+</p>
+
+The screenshots are a local build with TMDB's public catalogue; no library was filled and no account was used.
 
 ## Quick start
 
@@ -119,8 +138,7 @@ in English, a work PR into `develop` and a release PR into `main`. CI runs on ev
   repository variable, never committed ([docs/decisions.md](docs/decisions.md)).
 - **The CSP is a `<meta>`, the other security headers are missing:** GitHub Pages cannot send headers; the meta CSP
   carries the hash of the one inline script.
-- **README images** are still missing; now that the brand is done they will come from `tools/readme-images` (profile
-  `movie-discovery`).
+- **No DamReboot footer, a Team section instead:** Frame grew out of a team project.
 
 ## Documentation
 
@@ -131,7 +149,9 @@ in English, a work PR into `develop` and a release PR into `main`. CI runs on ev
 | [docs/decisions.md](docs/decisions.md)   | why a new repository, a SPA, the key in the browser, localStorage, the service worker |
 | [docs/repository.md](docs/repository.md) | GitHub description, topics and settings, and the command that sets them               |
 
-Local working files (exports, archived images of the first version) live in `.scratch/`, never committed.
+The README images (`docs/images/`) are made with `tools/readme-images`, profile `movie-discovery`, from a local
+`pnpm preview`. Local working files (exports, archived images of the first version) live in `.scratch/`, never
+committed.
 
 ## Team
 
