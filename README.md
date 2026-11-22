@@ -138,7 +138,6 @@ in English, a work PR into `develop` and a release PR into `main`. CI runs on ev
   repository variable, never committed ([docs/decisions.md](docs/decisions.md)).
 - **The CSP is a `<meta>`, the other security headers are missing:** GitHub Pages cannot send headers; the meta CSP
   carries the hash of the one inline script.
-- **No DamReboot footer, a Team section instead:** Frame grew out of a team project.
 
 ## Documentation
 
@@ -153,23 +152,21 @@ The README images (`docs/images/`) are made with `tools/readme-images`, profile 
 `pnpm preview`. Local working files (exports, archived images of the first version) live in `.scratch/`, never
 committed.
 
-## Team
+## Versions
 
-Frame grew out of **Filmoteka**, built by HiFiveTeam; the roles are the ones the team wrote down. The rebuild as Frame
-is by Damian Tchorzewski.
-
-| Member                                                     | Role and work                                                                                                                        |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Damian Tchorzewski](https://github.com/damiantchorzewski) | **Team Lead.** Project management, coordinating and delegating tasks; the starter files; code review; pagination and search; icons.  |
-| [Beniamin Brzeziński](https://github.com/benbrzezinski)    | **Scrum Master.** Code review; team meetings; the API with `fetch`; Local Storage; adding and deleting films; global styles; Trello. |
-| [Dorota Dudzik](https://github.com/doradudzik)             | Rendering and functions of the film cards; the overall application and styles; animations.                                           |
-| [Edyta Sowa](https://github.com/EdytaSowa)                 | The header of the home and library pages; the search.                                                                                |
-| [Filip Vukić](https://github.com/FVuk)                     | The window for films and for the team.                                                                                               |
-| [Dagmara Sobczyk](https://github.com/DagmaraSobczak)       | The footer of the home and library pages; the display of trailers.                                                                   |
-| [Dawid Demkowicz](https://github.com/Ddemkowicz)           | The "Watched" and "Queue" buttons that build the lists of films.                                                                     |
-| [Filip Zieliński](https://github.com/Thebrefff)            | The search.                                                                                                                          |
-| [Filip Grzelak](https://github.com/FilipGk)                | Pagination of large result sets.                                                                                                     |
+| Version                    | Repository                                                                   | Made by                                                                                        |
+| -------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 1: Filmoteka               | [`tmdb-movie-browser`](https://github.com/DamTchorzewski/tmdb-movie-browser) | HiFiveTeam (see its [Team section](https://github.com/DamTchorzewski/tmdb-movie-browser#team)) |
+| 2: Frame (this repository) | `movie-discovery`                                                            | [Damian Tchorzewski](https://github.com/DamTchorzewski)                                        |
 
 This product uses the TMDB API but is not endorsed or certified by TMDB. Streaming availability comes from JustWatch.
 
 Licensed under the [MIT License](LICENSE).
+
+---
+
+<p align="center"><a href="https://damreboot.pl"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/company-dark.svg"><img src="docs/images/damreboot/company-light.svg" alt="damreboot.pl: company website" height="36"></picture></a><a href="https://www.linkedin.com/in/damian-tchorzewski-3b2388275/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/linkedin-dark.svg"><img src="docs/images/damreboot/linkedin-light.svg" alt="LinkedIn: let's connect" height="36"></picture></a><a href="mailto:damianchabracki@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/email-dark.svg"><img src="docs/images/damreboot/email-light.svg" alt="E-mail: write to me" height="36"></picture></a></p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/engineered-dark.svg"><img src="docs/images/damreboot/engineered-light.svg" alt="" height="33" align="middle"></picture> Engineered by <b>Damian Chabracki</b> (DamReboot IT)
+</p>
