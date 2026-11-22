@@ -36,7 +36,7 @@ and is rebuilt from scratch as a single-page app with React and TypeScript.
   friendly dialogs; `prefers-reduced-motion` respected.
 
 > **Status:** version 1 of Frame is built; the live site waits for the TMDB key as a repository variable
-> ([docs/deployment.md](docs/deployment.md)), so the button below works after the first deploy of `main`.
+> ([docs/deployment.md](docs/deployment.md)), so the Open site button works after the first deploy of `main`.
 
 ## Tech stack
 
