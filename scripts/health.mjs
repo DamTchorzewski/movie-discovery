@@ -9,14 +9,14 @@ if (!raw) {
 const base = raw.endsWith("/") ? raw : `${raw}/`;
 
 const checks = [
-  { path: "", status: 200, contains: "<title>Kadr" },
+  { path: "", status: 200, contains: "<title>Frame" },
   { path: "discover/", status: 200, contains: 'id="root"' },
   { path: "library/", status: 200, contains: 'id="root"' },
   { path: "tonight/", status: 200, contains: 'id="root"' },
   { path: "en/", status: 200, contains: 'id="root"' },
   // GitHub Pages answers a film path with 404.html, which is the same app
   { path: "movie/550-fight-club/", status: 404, contains: 'id="root"' },
-  { path: "manifest.webmanifest", status: 200, contains: '"name": "Kadr"' },
+  { path: "manifest.webmanifest", status: 200, contains: '"name": "Frame"' },
   { path: "sw.js", status: 200, contains: "kadr-shell" },
 ];
 
